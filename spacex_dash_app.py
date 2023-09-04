@@ -78,7 +78,7 @@ def get_pie_chart(entered_site):
         #print(type(filtered_df))
         fig = px.pie(filtered_df, values='class', 
         names='Launch Site', 
-        title='title')
+        title='Success Rate of each Launch Site')
        # print(fig)
         return fig
     else:
@@ -86,7 +86,7 @@ def get_pie_chart(entered_site):
        # fig = px.pie(spacex_df[spacex_df['Launch Site'] == entered_site], values='class', 
         fig = px.pie(filtered_df1, values='count',
         names='class', 
-        title='title')
+        title='Success vs. Failure at the launch site: {}'.format(entered_site))
         #print(fig)
         return fig
         # return the outcomes piechart for a selected site
